@@ -1,0 +1,108 @@
+Package: manager
+Version: 1.0-2
+Depends: libc, libssp, libuci, libubox, libopenssl, libpthread, libjson-c, wan-discovery, nbtscan, libcurl, ca-certificates, ca-bundle, libubus, wget, libiwinfo
+Section: newifi
+Architecture: arm_cortex-a7_neon-vfpv4
+Installed-Size: 14589
+Filename: manager_1.0-2_arm_cortex-a7_neon-vfpv4.ipk
+Size: 15355
+MD5Sum: a2e58b9f669ab5c15e0f1ec104db3a61
+SHA256sum: 490b55d91792fc5ba66522bb0a06fcc3e8439b004b1c21921e8c5333e87c8262
+Description:  newifi router manager
+
+Package: newifi-gamehunter
+Version: 4.0.0-1
+Depends: libc, libssp
+Section: newifi
+Architecture: arm_cortex-a7_neon-vfpv4
+Installed-Size: 59613
+Filename: newifi-gamehunter_4.0.0-1_arm_cortex-a7_neon-vfpv4.ipk
+Size: 60440
+MD5Sum: 880438401c77760e135526a2cd8f4a6a
+SHA256sum: 1ef4c978ebf88ab71491e14628580b0b4e39dc67abfb3609eed5b7300b53cd8b
+Description:  gamehunter
+
+Package: newifi-luci2
+Version: 1-1
+Depends: libc, libssp, rpcd, rpcd-mod-iwinfo, uhttpd, uhttpd-mod-ubus, libubox, libubus
+Section: newifi
+Architecture: arm_cortex-a7_neon-vfpv4
+Installed-Size: 1683419
+Filename: newifi-luci2_1-1_arm_cortex-a7_neon-vfpv4.ipk
+Size: 1682983
+MD5Sum: 8e5c87e49866f602449a7ff1877fd2a1
+SHA256sum: 6286d677d2e73ec4067767f2193d4895edd08b17929453fa686bdb2e3d92b03a
+Description:  Provides the newifi(LuCI2-based) web interface with standard functionality.
+
+Package: newifi-nwan
+Version: 4.0.0-1
+Depends: libc, libssp
+Section: newifi
+Architecture: arm_cortex-a7_neon-vfpv4
+Installed-Size: 133818
+Filename: newifi-nwan_4.0.0-1_arm_cortex-a7_neon-vfpv4.ipk
+Size: 134522
+MD5Sum: 64158f653d4c67d007e3db93f6583c0f
+SHA256sum: 69a3cf1f7c37375dec80d4781643a9b8f70c0a444c7047124dbafdbda7b78bb9
+Description:  nwan
+
+Package: newifi-srv
+Version: 1.7-2
+Depends: libc, libssp, libuci, libubus, ubus, ubusd, libubox, libopenssl, libpthread, libiwinfo, libparted, speedtest, curl
+Section: newifi
+Architecture: arm_cortex-a7_neon-vfpv4
+Installed-Size: 20475
+Filename: newifi-srv_1.7-2_arm_cortex-a7_neon-vfpv4.ipk
+Size: 21202
+MD5Sum: 52c104aceca51cdd26d187fa2c51c0e4
+SHA256sum: 5de7a5589de5dc163eb9e97f27a5d410f5be67f6c28a332e46d10d5353df11f0
+Description:  This package provides ubus service from Newifi Web and APP.
+
+Package: newifi-timecontrol
+Version: 4.0.0-1
+Depends: libc, libssp, libubox, libuci
+Section: newifi
+Architecture: arm_cortex-a7_neon-vfpv4
+Installed-Size: 155721
+Filename: newifi-timecontrol_4.0.0-1_arm_cortex-a7_neon-vfpv4.ipk
+Size: 156448
+MD5Sum: 080f9212588692ad51fc8595b449c7f6
+SHA256sum: 0d5b496f89f04bbbe3b2ea73b3040d55cdf516b0d49d88fbeef933fcd84e4887
+Description:  Time control for client
+
+Package: restrict_app
+Version: 1
+Depends: libc, libssp, librt, libpthread, libuci, libjson-c
+Section: newifi
+Architecture: arm_cortex-a7_neon-vfpv4
+Installed-Size: 4501
+Filename: restrict_app_1_arm_cortex-a7_neon-vfpv4.ipk
+Size: 5184
+MD5Sum: f55b79761eec8beee6c3af6309527d09
+SHA256sum: f6eaedc29e3b0165c555de9303170233b7ed0dac425c33008b0f11f001b218e4
+Description:  access restrict
+
+Package: smartqos
+Version: 1.0-2
+Depends: libc, libssp, librt, libpthread, libuci, libjson-c, tc, iptables-mod-imq, libericstools, gargoyle-firewall-util, kmod-sched-core, kmod-sched-connmark
+Section: newifi
+Architecture: arm_cortex-a7_neon-vfpv4
+Installed-Size: 10604
+Filename: smartqos_1.0-2_arm_cortex-a7_neon-vfpv4.ipk
+Size: 11385
+MD5Sum: 73774c5dcdd77dd6f595bf14b7c28998
+SHA256sum: 32998439199531ad691fde4ccaf472df47d01943b147dbd888a033f921159c72
+Description:  User mode daemon for QOS
+
+Package: xapi
+Version: 1.0-2
+Depends: libc, libssp, libuci, libubox, libopenssl, libpthread, libjson-c, libcurl, libubus, ubus
+Section: newifi
+Architecture: arm_cortex-a7_neon-vfpv4
+Installed-Size: 21400
+Filename: xapi_1.0-2_arm_cortex-a7_neon-vfpv4.ipk
+Size: 22113
+MD5Sum: 9b94d6c04bbe1ac63b867647651ea2eb
+SHA256sum: 7dc1a76e5cc7daf67b9fcd44c8cbbf678a40535a778a56fbaffe58a0e129232d
+Description:  Xapi for newifi app
+

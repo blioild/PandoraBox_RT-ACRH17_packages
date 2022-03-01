@@ -1,0 +1,60 @@
+Package: luci-mod-pandorabox
+Version: git-18.234.48328-986ce54-1
+Depends: libc, libssp, luci-mod-admin-full, pppoe-discovery
+Section: luci
+Architecture: arm_cortex-a7_neon-vfpv4
+Installed-Size: 37456
+Filename: luci-mod-pandorabox_git-18.234.48328-986ce54-1_arm_cortex-a7_neon-vfpv4.ipk
+Size: 38354
+MD5Sum: dc9f823b580be33a40d743ba965c402a
+SHA256sum: abb25c0ca7b5d4b3c29ff1b92fe8cb48c9097a80577bfe8942c444d064b7ac61
+Description:  LuCI Administration - full-featured for full control
+
+Package: luci-pandorabox-simple
+Version: git-18.234.48328-986ce54-1
+Depends: libc, libssp, uhttpd, uhttpd-mod-ubus, firewall, luci-base, luci-mod-pandorabox, luci-theme-lafite-simple, wan-discovery, libiwinfo-lua, iwinfo
+Section: luci
+Architecture: arm_cortex-a7_neon-vfpv4
+Installed-Size: 105
+Filename: luci-pandorabox-simple_git-18.234.48328-986ce54-1_arm_cortex-a7_neon-vfpv4.ipk
+Size: 876
+MD5Sum: 018ca6b42234d90554064e46c3c9d829
+SHA256sum: f4dd8ab12c0f33becbe2e92e2065df11eb5637463965e32eaecdee4a906d2653
+Description:  Standard PandoraBox theme
+
+Package: luci-pandorabox
+Version: git-18.234.48328-986ce54-1
+Depends: libc, libssp, uhttpd, uhttpd-mod-ubus, luci-mod-admin-full, luci-mod-pandorabox, luci-theme-lafite, wan-discovery, luci-app-firewall, luci-proto-ppp, libiwinfo-lua, luci-proto-ipv6
+Section: luci
+Architecture: arm_cortex-a7_neon-vfpv4
+Installed-Size: 105
+Filename: luci-pandorabox_git-18.234.48328-986ce54-1_arm_cortex-a7_neon-vfpv4.ipk
+Size: 935
+MD5Sum: f18744205ce2618c482343a78e502c85
+SHA256sum: eccce29a21012ef59a3d661f27040538f0faedd1a82901f123ee69d1e5bae3c4
+Description:  Standard OpenWrt set including full admin with ppp support and the default Bootstrap theme
+
+Package: luci-theme-lafite-simple
+Version: git-18.234.48328-986ce54-1
+Depends: libc, libssp, luci-mod-pandorabox
+Section: luci
+Architecture: arm_cortex-a7_neon-vfpv4
+Installed-Size: 325259
+Filename: luci-theme-lafite-simple_git-18.234.48328-986ce54-1_arm_cortex-a7_neon-vfpv4.ipk
+Size: 320047
+MD5Sum: cf51cfb3012b1515f4e3e2f41c9bc202
+SHA256sum: ec0116332ab711683f30a906291867e878b43264d552509758f915bc0c0ae25b
+Description:  LuCI lafite theme
+
+Package: luci-theme-lafite
+Version: git-18.234.48328-986ce54-1
+Depends: libc, libssp, luci-mod-pandorabox
+Section: luci
+Architecture: arm_cortex-a7_neon-vfpv4
+Installed-Size: 322834
+Filename: luci-theme-lafite_git-18.234.48328-986ce54-1_arm_cortex-a7_neon-vfpv4.ipk
+Size: 320295
+MD5Sum: 1b9dad3cfeca14b2bbe0af3b8dc84d07
+SHA256sum: fe50819634fe54cfbc13974be3af4394c7bb4cc769b2ef85a30e48b3f3138368
+Description:  LuCI lafite theme
+

@@ -1,0 +1,12 @@
+Package: pear_ota
+Version: 1-1
+Depends: libc, libssp, libcurl, jansson
+Section: Pear
+Architecture: arm_cortex-a7_neon-vfpv4
+Installed-Size: 14473
+Filename: pear_ota_1-1_arm_cortex-a7_neon-vfpv4.ipk
+Size: 15108
+MD5Sum: 8b8f40abe9065630a4d4931aa9d0bf28
+SHA256sum: ff52916420d85e525a8cdbd340388378fc5140a6965900c919aed651193a0822
+Description:  Pear firmware OTA
+

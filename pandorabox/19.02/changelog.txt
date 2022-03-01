@@ -1,0 +1,568 @@
+﻿<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<div style="color:#0000FF">
+<br><b>PANDORABOX FIRMWARE IS FREE FOR NON-COMMERCIAL USE ONLY.</b><br>
+<br>
+<br><b>PandoraBox固件免费授权于非商业环境使用.</b><br>
+<hr>
+</div>
+
+Powered by PandoraBox Team:<br> 
+<a href="mailto:lintel.huang@gmail.com">lintel</a><br> 
+<a href="mailto:gch981213@gmail.com">GuoGuo</a><br> 
+<a href="mailto:strugglelg@gmail.com">Shawn.luo</a><br> 
+<a href="mailto:coolsnowwolf@gmail.com">Lean</a><br> 
+
+<hr>
+<br><b>更新日志：</b><br>
+<hr>
+
+<div style="color:#0000FF">
+<br><b>绿水青山,江湖再见!</b><br>
+ <marquee>
+人生于世上 有几个知己
+多少友谊能长存
+今日别离 共你双双两握手
+友谊常在你我心里
+几许往事 此刻满心汹涌
+怎不教离愁难掩
+轻漆起伤 感美酒倾尽
+还送名言与君相勉
+今天且有暂别 他朝也定能聚首
+纵使不能会面 始终也是朋友
+说有万里山 隔阻两地遥
+不需见面 心中也知晓
+友谊改不了
+--<友谊之光>
+</marquee>
+</div>
+
+<br><b>2019.02.23</b><br>
+IPQ806X默认关闭VLAN，注意:VLAN重新开启需要使用ethX.X接口 <br>
+增加linksys系列原厂固件升级支持，factory.bin后缀固件可以在官方固件上升级 <br>
+更新flashrom到1.0.x-git <br>
+修复luci-app-smartinfo无法使用问题 <br>
+MT7621增加initramfs，用于NAND升级 <br>
+修复R3P/R3G NAND坏快保留区域 <br>
+更新MT7621 NAND驱动，适应新NAND API <br>
+Backport linux 3.16的NAND API <br>
+修复小米R3P LAN接口名称错误问题 <br>
+
+<br><b>2019.02.18</b><br>
+修复WNDR3800 Internet-LED显示问题 <br>
+修复extroot overlay失效问题 <br>
+qcawifi调整5G信道默认为149，解决部分设备无法链接低频信道问题 <br>
+彻底修复upnp在迅雷5等应用下无法正常使用问题 <br>
+
+<br><b>2019.02.16</b><br>
+mt7621增加新的eip93硬件加密驱动(待测) <br>
+更新mac80211驱动到4.19.7 <br>
+
+<br><b>2019.02.11</b><br>
+取消针对ar71xx MIPS 74Kc优化，重新以10%+的性能损耗重新兼容MIPS 24KC系列 <br>
+尝试适配WNDR4300/WNDR3700/WNDR3800,待测试 <br>
+尝试适配ARCHER C5系列,待测试 <br>
+尝试适配ARCHER C7(WDR7500v2/v3/v5),待测试 <br>
+qcawifi默认不设置国家代码，解锁信道，功率限制 <br>
+qcawifi增加2.3G/2.5G superchannel(特殊信道)支持 ,需要设置国家代码为DB调试模式 <br>
+
+<br><b>2019.02.01</b><br>
+增加linksys ea8500/ea6350v3双启动支持 <br>
+full-cone-nat修正SNAT错误 <br>
+
+<br><b>2019.01.31</b><br>
+增加cifsd和cifsd-tools <br>
+更新ipq40xx smp优化参数 <br>
+
+<br><b>2019.01.30</b><br>
+修C526A MT7615N MAC地址错误问题 <br>
+修正EA6350v3原厂uboot双启动支持 <br>
+增加EA6350v3/C526A的BoardData,修复信号差问题 <br>
+增加Linksys EA6350v3支持(IPQ4018) <br>
+增加Hiwifi C512A支持(IPQ4019+MT7615N) <br>
+修正mt7615对qualcomm平台的支持 <br>
+ipq40xx/ipq806x增加gpiodev支持 <br>
+qcawifi增加IPQ4019双5G boarddata <br>
+修复apcli在arm平台下的getopt错误 <br>
+拆分ralink-apctrl，用于支持非ralink平台 <br>
+qcawifi增加双5G支持 <br>
+增加qca-mcs，用于IGMP代理加速 <br>
+
+
+<br><b>2019.01.28</b><br>
+增加qca-nss-ecm开关选项 <br>
+qcawifi增加TDMA支持选项,需要AP和STA设备同时启用TDMA支持才能生效 <br>
+qcawifi增加国家代码选项 <br>
+qcawifi默认打开HT40 <br>
+
+<br><b>2019.01.27</b><br>
+增加Linksys EA8500(IPQ8064+QCA9880+QCA9980)支持 <br>
+优化AR71XX 74Kc系列SoC编译参数，默认打开MDSP R2支持 <br>
+默认不再支持CA953X/AR933X系列24Kc SoC，准备放弃支持 <br>
+
+<br><b>2019.01.24</b><br>
+修复DW33D/SBR-AC1750 NAT无法超过百兆问题(GMAC workaround) <br>
+修正ipq806x的GMAC Power配置 <br>
+
+<br><b>2019.01.23</b><br>
+增加freeradius3 <br>
+qcawifi增加K2T/R78000的BoardData修正,尝试修复K2T/R7800 5G信号弱问题 <br>
+暂时删除ATH10k对K2T/R7800支持，当前ATH10K对QCA9984/QCA9886支持存在BUG <br>
+
+<br><b>2019.01.20</b><br>
+增加Arris SBR-AC1750(QCA9558+QCA9880)支持 <br>
+增加Phincomm K2T支持(QCA956X+QCA9886) <br>
+增加Letv SuperRouter(QCA9531)支持 <br>
+qcawifi修正qca953x无线名称 <br>
+
+<br><b>2019.01.19</b><br>
+修正mx25l25635e的reset错误问题 <br>
+qcawifi默认关闭对垃圾BCM设备的MU-MIMO支持，修正使用BCM4359芯片的手机吞吐过低问题(BCM BUG)! <br>
+修正jhr-ac860m sysupgrade无法升级固件问题 <br>
+
+<br><b>2019.01.13</b><br>
+Win10 1809新版本已经默认不支持SMB1，放弃Samba3.x支持 <br>
+spi-mt7621驱动替换为upstream(linux 4.20)版本 <br>
+
+<br><b>2019.01.09</b><br>
+增加基于ntfs-3g修改的内核态ntfs驱动，第一版，待测 <br>
+更新mtk nand支持列表，尝试修正小米R3P新型号不支持问题 <br>
+增加Netgear R7800(IPQ8065+QCA9984+QCA9984)支持 <br>
+默认关闭路由器缓存，修正mwan的路由表缓存问题 <br>
+
+<br><b>2019.01.03</b><br>
+修正qcawifi作为sta时速率只能工作11a或11g问题 <br>
+修正x86平台对VMware/Hyper-V虚拟化平台的支持 <br>
+增加mwan3 helper <br>
+修正ipq806x ahci无法正常工作问题 <br>
+
+<br><b>2018.12.31</b><br>
+再次尝试修复pptp服务无法使用问题(待测) <br>
+UPNP默认启用兼容模式，解决部分软件不支持新协议问题 <br>
+刷新相关的配置，ipq806x第一版release <br>
+ipq806x默认启用lxc容器支持 <br>
+
+<br><b>2018.12.30</b><br>
+增加buffalo wxr-2533dhp(IPQ806x)支持 <br>
+增加qualcomm ap148(IPQ806x) demo支持 <br>
+pbr-optimizer增加ipq806x支持 <br>
+修正ipq806x nss-crypto支持 <br>
+修正ipq806x nss-ecm支持 <br>
+修正ipq806x nss-offload支持 <br>
+修正ipq806x samba加速支持 <br>
+修正ipq806x qcawifi boarddata加载错误问题 <br>
+
+<br><b>2018.12.29</b><br>
+修正golang在x86等平台无法编译问题 <br>
+暂时关闭mt7621 highmem <br>
+ppp移除相关延迟选项 <br>
+使用dnsmasq-full 替换 dnsmasq-dhcpv6 <br>
+ 
+<br><b>2018.12.28</b><br>
+修正ipq806x clk驱动，解决cpu主频无法设置问题 <br>
+
+<br><b>2018.12.25</b><br>
+更新nat46 <br>
+增加ipq806x/807x NSS firmware <br>
+增加rpcd自动重启参数，解决登录错误问题 <br>
+梳理ipq806x平台 <br>
+
+<br><b>2018.12.19</b><br>
+mptcp导致网络出现各自错误，临时移除mptcp支持 <br>
+修正新spi nor驱动未导入of_part,导致spi flash分区错误问题 <br>
+
+<br><b>2018.12.19</b><br>
+修正lxc下procd重启导致的错误 <br>
+backport udp-tunnel from linux 3.17 <br>
+修正newifi3/youku l2 内核驱动默认的vlan错误 <br>
+
+<br><b>2018.12.13</b><br>
+mt7621/ipq40xx平台默认打开LXC/docker容器虚拟化支持 <br>
+更新rtorrent到0.13.7 <br>
+增加增加gopath到path环境变量，方便执行go程序 <br>
+更新uclibc-ng到1.0.31 <br>
+修正wr1200js没有无线问题,待测 <br>
+更新xl2tpd,待测 <br>
+修正R3P WAN口不对的问题,待测 <br>
+
+<br><b>2018.12.12</b><br>
+修正procd在lxc容器下相关的pts无法正常使用问题 <br>
+修正fstools在lxc容器下需要跳过overlay  <br>
+更新luci-app-lxc翻译 <br>
+更新lxc到3.0.3 <br>
+修正lxc的pandorabox模板错误 <br>
+修正lxc的debian模板错误 <br>
+
+<br><b>2018.12.08</b><br>
+梳理所有平台的spi相关内核配置/patches <br>
+
+<br><b>2018.12.06</b><br>
+增加qt5界面库,计划用于MT7628+SPI-TFT屏幕 <br>
+
+<br><b>2018.12.05</b><br>
+backport 4.19 spimem支持 <br>
+backport 4.19的spi nor/nand支持 <br>
+梳理linux spi nor/nand架构相关的支持 <br>
+更新mt7621/mt7628 SPI host驱动 <br>
+
+<br><b>2018.11.26</b><br>
+procd fstools修正在lxc容器下无法正常运行问题 <br>
+lxc增加debian跟pandorabox模板 <br>
+更新rpcd-mod-lxc <br>
+luci-app-lxc重构 <br>
+PandoraBox SDK允许golang package编译 <br>
+
+<br><b>2018.11.26</b><br>
+更新golang相关软件包，go-ipfs/gx-go/docker/lxd等
+修正golang相关package，支持SDK能直接编译golang package
+更新golang toolchain支持，修改package.mk支持golang package编译 <br>
+更新btrfs-progs <br>
+更新xz库 <br>
+
+<br><b>2018.11.21</b><br>
+更新lxc到3.0.2 <br>
+
+<br><b>2018.11.19</b><br>
+默认使用luci-theme-darkmatter主题 <br>
+更新util-linux,增加lscpu等命令 <br>
+
+<br><b>2018.11.18</b><br>
+更新swconfig与lede 17.01一致 <br>
+swconfig支持switch_ext <br>
+swconfig切换为libswconfig <br>
+qcawifi 关闭ipq40xx的fw dump，节省内存 <br>
+更新dw33d led配置 <br>
+
+
+<br><b>2018.11.17</b><br>
+2.4G WiFi默认只打开HT20，一样的驱动总有傻X说2.4G比Padavan差 <br>
+2.4G 吞吐低的同学可以打开HT40(抗干扰差) <br>
+
+<br><b>2018.11.16</b><br>
+修正ImageBuild缺少对应文件,无法正常使用问题 <br>
+修正一系列的package依赖错误 <br>
+修正PGB-4G支持，更新4G DEMO默认软件包 <br>
+
+<br><b>2018.11.15</b><br>
+ralink平台更新到新的软件包架构 <br>
+
+<br><b>2018.11.14</b><br>
+AR71XX更新到新的软件包架构 <br>
+
+<br><b>2018.11.13</b><br>
+修正AR71XX SFE加载错误无法正常运行问题 <br>
+增加歌华链路由GH-A1支持(MT7621AT+MT7612E+MT7603E) <br>
+
+<br><b>2018.11.12</b><br>
+修正大麦dw33d 无线mac地址错误问题 <br>
+AR71XX针对部分机型分开生集成ATH9K/ATH10K/qcawifi驱动 <br>
+
+<br><b>2018.11.11</b><br>
+为所有生成的固件增加git版本号日期后缀 <br>
+清理AR71XX平台，移除所有AR713X/AR714x/AR7161/AR913x/AR9331的相关机型的支持 <br>
+精简标准内核大小，适应QCA AP152部分特殊机器 <br>
+同步switch api与lede 17.01一致 <br>
+增加全新的package.mk软件包默认生成模式 <br>
+
+
+<br><b>2018.11.10</b><br>
+增加TOTOLINK A7000R(MT7621AT+MT7615N+MT7615N)支持 <br>
+修正ath9k在ar71xx qca956x上运行崩溃问题 <br>
+修正mt7628 ephy LED function错误问题 <br>
+
+<br><b>2018.11.07</b><br>
+同步nginx版本与openwrt 18.06一致 <br>
+修正qcawifi在x86平台下无法编译问题 <br>
+更新uclibc-ng到git master <br>
+
+<br><b>2018.11.06</b><br>
+修正pbr-aps512加载art数据错误导致qcawifi崩溃问题 <br>
+修正qcawifi在mt7621平台下无法正常加载问题 <br>
+允许qca-hostapd等套件在非qca平台上编译，计划用于MT762X/88F6560/x86等平台 <br>
+
+<br><b>2018.11.05</b><br>
+增加RosyWrt WR818(QCA956X)支持
+增加大麦DW33D支持，默认使用qcaiwifi <br>
+增加Netgear WNDR4300v2/WNDR4500v3(QCA956X)支持，默认使用qcaiwifi <br>
+增加qcawifi需要的9K/10K全系列firmware  <br>
+qcawifi增加自动修正art checksum功能 <br>
+修正art2在mt7621平台下无法正常加载问题 <br>
+修正spi-nand 驱动无法使用GD5F1G4UXX问题 <br>
+修正ar71xx平台对spi nand的支持 <br>
+
+<br><b>2018.11.08</b><br>
+增加JCG JHR848Q(QCA956X)支持 <br>
+更新ar8337n ssdk驱动,准备支持HWNAT <br>
+更新QCA956X/QCA955X系列GPIO IRQ <br>
+更新QCA956X/QCA955X系列核心支持 <br>
+
+<br><b>2018.10.23</b><br>
+正式加入ar71xx release，仅WR843N(ar9341，64M，16M)测试通过 <br>
+修正sfe加速在x86与ar71xx平台上无法正常加载问题 <br>
+filemager增加mips平台支持 <br>
+backport 4.10 MIPS-Introduce-irq_stack,允许每个cpu都有各自的内部irq stack <br>
+
+<br><b>2018.10.22</b><br>
+修正php-pecl-http在ar71xx平台上无法编译问题 <br>
+ar71xx增加mips74kc架构优化参数,默认打开mdsp优化长整数 <br>
+ar71xx丢弃旧版ar724x ar913x等24kc SoC支持,仅支持74kc系列SoC <br>
+ar71xx GPIO驱动增加IRQ支持，pandorabox按键驱动仅支持IRQ触发 <br>
+ar71xx丢弃旧平台固件生成模式，新模式暂时只支持几个新的路由器型号 <br>
+ar71xx修正pandorabox gpio button支持 <br>
+ar71xx丢弃nand等subtarget，合并成为单一的target <br>
+
+<br><b>2018.10.21</b><br>
+修正ar71xx下qca-wifi-fulloffload无法正常加载问题 <br>
+修改ar71xx平台qcawifi驱动无法正确加载art校准数据问题，workaround! <br>
+修正ar71xx hostname错误问题 <br>
+修正iwinfo在ar71xx平台上不支持qcawifi驱动问题 <br>
+backport linux 4.10 symbol_ktime_divns <br>
+
+<br><b>2018.10.20</b><br>
+luci-app-filemanager增加x86支持 <br>
+x86更新alpha测试版本 <br>
+修正新版mac80211驱动在arm平台无法编译问题 <br>
+
+<br><b>2018.10.17</b><br>
+更新修正mt7603无线ping严重掉包问题(由另外一个BUG修复导致) <br>
+取消mt7603 PSM BUG修复补丁 <br>
+更新mt7603驱动速率算法,尝试缓解ping丢包问题 <br>
+
+<br><b>2018.10.15</b><br>
+合并mt76到MAC80211驱动 <br>
+backport linux-4.1的skb_to_sgvec_nomark函数 <br>
+修正mac80211 mt7601u驱动编译 <br>
+backport linux-4.19 mt76x2u/mt76x0u驱动支持 <br>
+linux firmware增加mt7612e mt7621u支持 <br>
+backport linux-4.19 ath10k-ct <br>
+更新lvm2 <br>
+
+<br><b>2018.10.14</b><br>
+增加modemmanager，用于MC7455等模块管理 <br>
+增加pgb-4gm的支持,PanguBox的4G设备 <br>
+PandoraBox SDK编译带上target_dir,包含大部分的库，避免编译软件包缺少库 <br>
+QMI驱动增加SLM750 4G模块的支持 <br> 
+cellular-modems增加对SLM750的拨号支持 <br>
+cellular-modems取消SIM7100/7600系列模块的QMI拨号支持，强制使用PPP拨号  <br>
+修复部分firmware有bug的4G模块无法使用QMI模式问题 <br>
+修正非acpi支持平台编译mac80211驱动backport问题 <br>
+修正X86平台无法使用mac80211 backport 4.19-rc5问题 <br>
+udhcpc尝试修正IPv6 <br>
+同步OpenWrt mac80211 backport 4.19-rc5修改 <br>
+
+<br><b>2018.10.11</b><br>
+修正LUCI PPP拨号时无法正常状态问题 <br>
+MT7612/MT7603/MT7615的PSM模式小调整 <br>
+增加JCG JHR-AC860M支持，无线模块为MT7615B 3x3 <br>
+
+<br><b>2018.10.10</b><br>
+尝试修正小米Pro MT7615N支持，待测. <br>
+尝试修正K2P MT7615D DBDC支持，IxChariot测试失败，参考已知BUG. <br>
+MT7615N/MT7615DN驱动退回4.4.2.1 <br>
+MT7615修正内存越界问题 <br>
+MT7615 MCU Firmware同步到20171225132226a <br>
+MT7615修正与AC9260兼容性问题 <br>
+
+已知BUG:MT7615 PCIE Reset导致的中断错误 <br>
+已知BUG:MT7615 9260AC IxChariot多线程混合测试失败 <br>
+
+<br><b>2018.10.7</b><br>
+删除新的mac80211驱动中所有bcm网卡的支持 <br>
+mac80211驱动更新到4.19-rc5 backport <br>
+
+
+<br><b>2018.10.6</b><br>
+cellular-modems:<br>
+SLM630B启用ECM拨号模式 <br>
+SIM7600CE取消QMI强制使用PPP拨号模式 <br>
+修正Neoway N720的短信端口 <br>
+
+<br><b>2018.10.5</b><br>
+mt7628系列4G设备使用全新的cellular-modems 4g拨号方式 <br>
+增加PandoraBox cellular-modems软件包，用于4G网络应用  <br>
+增加smstool,用于4g模块短信 <br>
+更新uqmi ubim等应用,用于4G模块调试 <br>
+更新linux 3.14内核的QMI接口驱动,backport自linux 4.18 <br>
+修正SIM7100/7600的QMI模式的驱动支持，SIM7600CE模块固件本身QMI存在BUG. <br>
+
+<br><b>2018.10.4</b><br>
+移除libubox的workaround,导致系统初始化配置各种错误 <br>
+增加luci-theme-netgear,来自恩山网友 <br>
+
+<br><b>2018.10.4</b><br>
+增加luci-app-update，用于OTA更新，仅完成日志更新 <br>
+x86平台删除不需要的设备支持，增加x64支持 <br>
+
+<br><b>2018.10.1</b><br>
+ar71xx平台默认打开FPU模拟，node等应用需要FPU模拟 <br>
+更新comgt跟minicom,用于调试4G模块 <br>
+luci增加:<br>
+luci-app-access-control <br>
+luci-app-cifs <br>
+luci-app-lldpd <br>
+luci-app-guide <br>
+luci-app-smartinfo <br>
+luci-app-ttyd <br>
+luci-app-sms <br>
+luci-theme-darkmatter <br>
+
+    
+<br><b>2018.09.27</b><br>
+增加fl2000 usb2vga驱动 <br>
+尝试修正IPv6支持问题 <br>
+json_get_var参数增加workaround,参数为空返回0 <br>
+ 
+<br><b>2018.09.25</b><br>
+增加reaver与bind-host软件包 <br>
+更新ar71xx/x86内核，增加splice加速接口 <br>
+BCM的垃圾永远不支持，相关package全部设置为broken <br>
+无线芯片的firmware到openwrt 18.06版本 <br>
+强制跳过gcc bug 64735,toolchain问题 <br>
+修正pincrtl设置mt7628 ephy led无效问题 <br>
+ac-58u修正Power led点亮问题 <br>
+修正boost在armv5下无法编译问题 <br>
+ufsd x86修复支持 <br>
+
+
+<br><b>2018.09.20</b><br>
+修正luci-app-v2ray无法使用问题 <br>
+avanta平台切换为board.d模式，修改固件生成模式 <br>
+更新mac80211驱动与openwrt 18.06一致 <br>
+关闭SPI 50MHz高速模式，因为品质差/设计不良的flash无法正常启动 <br>
+
+<br><b>2018.09.09</b><br>
+更新avanta平台配置，准备重新支持MI424WR REV I <br>
+清理ar71xx平台支持的设备 <br>
+
+<br><b>2018.09.08</b><br>
+dnsmasq默认取消noping，默认打开顺序分配IP <br>
+修正kmod-ipt-nat6 缺少了 ip6table_nat.ko 模块问题 <br>
+更新shadowsocks-client <br>
+修正ssr等软件包无法正常使用问题 <br>
+修正luci-app-dnspod无法使用问题 <br>
+修正zerotier在arm无法编译的问题 <br>
+
+
+<br><b>2018.09.07</b><br>
+增加zerotier <br>
+uclibc-ng同步buildroot的修复 <br>
+修正gcc 5.5 libstdc++对uclibc的兼容问题 <br>
+
+<br><b>2018.09.05 </b><br>
+修复linux 3.14在binutils 2.30下无法编译问题 <br>
+更新binutils 2.30无法编译的软件包 <br>
+
+<br><b>2018.09.02 </b><br>
+修正大量在gcc7下无法编译的软件包 <br>
+更新binutils到2.6.30 <br>
+增加gcc 7.3/6.1/5.5，默认使用gcc 5.5 <br>
+
+<br><b>2018.09.01 </b><br>
+修正百度音乐盒M100支持，支持音频 <br>
+
+<br><b>2018.08.28</b><br>
+修正nodejs在ipq40xx无法编译问题 <br>
+增加atop gphoto2 v4l2rtspserver opus-tools rtty beep <br>
+更新valgrind以支持ARM平台 <br>
+ 修正gcc 4.9下procd无法编译问题 <br>
+
+
+<br><b>2018.08.27</b><br>
+修正nodejs在ipq40xx平台无法编译问题 <br>
+gcc修正fpu支持 <br>
+增加atop gphoto2 v4l2rtspserver opus-tools rtty beep <br>
+更新memtester<br>
+更新valgrind，支持ARM <br>
+修正gcc 4.9下procd无法编译问题 <br>
+增加ipq40xx/806x系列依赖的模块，SD/MMC/AHCI/I2C等 <br>
+丢弃udev，使用eudev <br>
+更新mt76xx i2s alsa驱动 <br>
+增加linksmart 7688支持 <br>
+修正mt76XX使用非UART0作为console无法使用的问题 <br>
+更新node v10 <br>
+更新golang <br>
+增加findutils <br>
+
+<br><b>2018.07.27</b><br>
+增加luci系列APP，来自Lean的开源项目: <br>
+https://github.com/coolsnowwolf/lede <br>
+
+luci-app-amule <br>
+luci-app-adbyby-plus <br>
+luci-app-amule <br>
+luci-app-dnspod <br>
+luci-app-dogcom <br>
+luci-app-frpc <br>
+luci-app-kcptun <br>
+luci-app-mproxy <br>
+luci-app-openvpn-server <br>
+luci-app-ssr-pro <br>
+luci-app-udp2raw <br>
+luci-app-v2ray <br>
+luci-app-vlmcsd <br>
+luci-app-xlnetacc <br>
+
+
+<br><br><b>2018.07.26</b><br>
+尝试修正shortcut-fe在MTK系列平台上无法工作问题，待测 <br>
+增加softethervpn <br>
+增加iphone usb共享驱动 <br>
+gcc-4.9 backport gcc-5.4的bug修复 <br>
+更新ngrokc <br>
+更新openconnect <br>
+
+<br><b>2018.07.24</b><br>
+更新gcc linaro到4.9,支持C++11/C11 <br>
+更新gdb linaro到7.8匹配gcc 4.9 <br>
+
+<br><b>2018.07.23</b><br>
+更新增加mt7628固件 release<br>
+修正mt7621音频缺少的gdma驱动<br>
+丢弃部分旧平台的支持<br>
+尝试增加友华WR1200JS支持，未测试<br>
+修正Linksys RE6500音频输出<br>
+
+增加pcap-dnsproxy <br>
+增加simple-obfs<br>
+更新shadowsocks<br>
+更新mbedtls libev libsodium pcre<br>
+
+<br><b>2018.07.22</b><br>
+修正RE6500 音频支持<br>
+修正Widora NEO 音频支持<br>
+修正MTK MT76XX I2S驱动支持<br>
+修正Regmap I2S/SPI驱动错误问题<br>
+修正linux 3.14 asound cache io导致音频错误问题<br>
+
+<br><b>2018.07.21</b><br>
+增加CH341A-SPI<br>
+增加ch341prog<br>
+更新flashrom到1.0,修正ch341a读写问题<br>
+修正linux 3.14内核的spi 全双工模式<br>
+更新speedtest为lintel重写的speedtest客户端<br>
+
+<br><b>2018.07.20</b><br>
+尝试修正斐迅K2G 千兆WAN搭配Breed无法使用问题，未验证<br>
+尝试更新mt7615驱动到5.0.2.0<br>
+更新uclibc-ng到1.0.30<br>
+修正GPIO PWM模块无法使用问题<br>
+修正GPIO SPI频率问题<br>
+
+<br><b>2018.07.19</b><br>
+增加原生golang<br>
+修正cmake模块无法使用问题<br>
+
+<br><b>2018.07.18</b><br>
+修正mt7621+mt76x2e 在intel 9260AC双向吞吐死机问题（同Samba写入测试问题）<br>
+修正mt76x2e与Intel 9260AC的兼容性问题<br>
+workaround MT76x2e在MT7621上压力测试一周出现Andes MCU wait timeout，未彻底解决<br>
+
+修正原生gcc编译参数<br>
+增加cmake软件包<br>
+
+<hr>
+
+<div style="color:#FF4500">
+<br><br><b>BCM的垃圾永远不支持,无需再问!!!</b><br><br>
+</div>
+
